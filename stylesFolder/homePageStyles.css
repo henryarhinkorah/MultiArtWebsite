@@ -56,6 +56,13 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 0, 0, 0.3);
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+}
+
+.headerContainer.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 0, 0, 0.5);
 }
 .logo{
     width:5%;
@@ -85,28 +92,32 @@
 .weDealText{
     font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 600;
-    color: black;
+    color: white;
     margin: 0;
     padding: 0;
 }
 .dealParaContainer{
-    margin-top: 2%;
+    margin-top: 1%;
+    padding: 10px;
     width: 100%;
     height: auto;
     background-color: red;
     display: flex;
     align-items: center;
     justify-content: center; 
+    flex-direction: column;
 }
 .dealParagraph{
     font-size: clamp(0.8rem, 3vw, 1.5rem);
     font-weight: 400;
-    color: white;
+    color: wheat;
     text-align: center;
     line-height: 1.4;
 }
 .missionContainer{
-    margin-top:5%;
+    margin-top:1%;
+    margin-left: auto;
+    margin-right: auto;
     width: 80%;
     height: auto;
     display: flex;
@@ -114,6 +125,9 @@
     justify-content: center; 
     padding: 5%;
     flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    
     
 }
 .title{
@@ -124,32 +138,51 @@
     align-items: center;
     justify-content: center;
     font-size: clamp(0.8rem, 3vw, 1.5rem);
-    width:100%
+    width:100%;
+    
 }
 .missionParagraph{
     word-wrap: break-word;
     max-width: 100%;
     align-self: center;
+    font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+    line-height: 1.4;
+}
+.whyContainer {
+    position: absolute;   
+    padding: 5%;
+    top:0;
+    z-index: 100;
+    width:auto;
+    height:fit-content;
+   
+}
+.whyParagraph{
+    color: white;
+    font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+    font-weight: 200;
+}
+.paragraphContainer{
+    width: 100%;
+    margin-bottom: 25px;
 }
 .footer{
     width: 100%;
-    height: 100px;
-    background-color: wheat;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    height: 15%;
+    padding: 15px;
     color: black;
     align-items: center;
     justify-content: center;
+    display: flex;
+    margin-top: 40px;
 }
 .footerText{
     font-size: 16px;
     font-weight: 200;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    align-self: center;
-    justify-self: center;
+    font-size: clamp(0.6rem, 1vw, 1rem);
+    color: red;
+ 
+ 
 }
 .pages {
     display: flex;
@@ -236,6 +269,18 @@
     align-items: flex-start;
     justify-content: flex-start; 
     gap: 20px; 
+}
+
+/* Scroll Animation Styles */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade-in.animated {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Show mobile menu for smaller screens */

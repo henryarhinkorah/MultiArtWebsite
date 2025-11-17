@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="./stylesFolder/homePageStyles.css"> 
         <script src="./scripts/activeUnderline.js" defer></script>
         <script src="./scripts/toggleMenuScript.js" defer></script>
+        <script src="./scripts/headerScrollBlur.js" defer></script>
+        <script src="./scripts/scrollAnimation.js" defer></script>
 
         <style>
             body, html {
@@ -20,10 +22,7 @@
                 font-family: 'Montserrat', sans-serif;
                 overflow-x: hidden;
                 align-items: center;
-                justify-content: center;
-                align-content: center;
-                display: flex;
-                align-self: center;
+              
             }
         
            
@@ -55,7 +54,7 @@
                             </nav>
                         
                                 <!-- Mobile Menu Icon for smaller screens -->
-                                <button id= "mobile-menu-icon" class ="mobile-menu-icon">
+                                <button id="mobile-menu-icon" class="mobile-menu-icon" onclick="toggleMobileMenu(); return false;">
                                 <i class="fas fa-bars"></i>
                                 </button>
                         
@@ -75,10 +74,11 @@
         
                 </div>
 
-                <div class="weDealContainer">
-                    <h4 class="weDealText">We deal in:</h4>
-                </div>
+                
                 <div class="dealParaContainer">
+                    <div class="weDealContainer">
+                        <h4 class="weDealText">We deal in:</h4>
+                    </div>
                     <ul>
                         <li class="dealParagraph">Electrical Installation</li>
                         <li class="dealParagraph">Mechanical Installation</li>
@@ -103,9 +103,53 @@
                         We deliver solutions that makes your business better whatever your business is, MULTI ART ENGINEERING SERVICES is created to bring you not only the best services and the latest technologies but also complete solutions that will enable your business to be even more efficient and productive.
                     </div>
                 </div>
-            <!-- <footer class="footer">
+
+                <div class="missionContainer">
+                    <div class="title">
+
+                        <h2 class="missionTitle">Our Vision</h2>
+                        <img src="./media/visionIcon.png" alt="logo" class="logo">
+                    </div>
+                    <div class="missionParagraph">
+                        As times and technology move onward, we will always be ready with the latest products and knowledge to guide your operations into the future of manufacturing.                    </div>
+                </div>
+                <div class="missionContainer">
+                    <div class="title">
+                        <h2 class="missionTitle">Our Values</h2>
+                        <img src="./media/values.png" alt="logo" class="logo">
+                    </div>
+                    <div class="missionParagraph">
+                        Every Automation project is well planned and organized by Automate Engineers. We make sure in Automate that every client will realize the real value he is going to gain in his new requirement by showing and make him understand the benefits he will receive and presenting him a timbale for achieving the results. Our suppliers are devoted to guarantee that permanent benefits are realized and the implementation is a complete success. Total Capabilities Value is an essential part of our Success Story               
+                    </div>
+                    </div>
+
+                <div class="missionContainer">
+                    <div class="title">
+                        <h2 class="missionTitle">Our Quality</h2>
+                        <img src="./media/qualityIcon.png" alt="logo" class="logo">
+                    </div>
+                    <div class="missionParagraph">
+                        We offer tailor-made solutions to our clients. These are renowned for their top quality and excellent customer services. Our vision is to create and develop a customer-oriented, medium sized engineering/supplying company, which provides a complex set of services in the area of industrial automation. We are convinced that our ability to compete is strictly measured by the quality of 
+                        services we provide. The best-qualified evaluator of the level of our services is the customer. The basic tool for fulfilling our vision is the ability to pay close attention to our customers’ needs and meeting their requirements in a reliable and flexible manner from the idea to the service.                 
+                    </div>
+                </div>
+
+                    <div class="pictureContainer" style="margin-top: 22px; ">
+                        <img src="./media/engpic.png" alt="engineer's picture" class="picture">
+                        <div class="whyContainer">
+                            <h1 style='color: white; text-align: center;'>Why Choose Us? </h1>
+                            <div class="paragraphContainer">
+                                <h3 class="whyParagraph">
+                                    At Multi Art Engineering , we combine innovation, precision, and expAt [Your Company Name], we combine innovation, precision, and expertise to deliver reliable engineering solutions that stand the test of time. Our team is committed to excellence, safety, and sustainability—ensuring every project is completed with superior quality and attention to detail. We don’t just build; we engineer solutions that make a lasting impact.ertise to deliver reliable engineering solutions that stand the test of time. Our team is committed to excellence, safety, and sustainability—ensuring every project is completed with superior quality and attention to detail. We don’t just build; we engineer solutions that make a lasting impact.  
+                                </h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            <footer class="footer">
                 <p class="footerText">&copy; 2025 MultiArtServices. All rights reserved.</p>
-            </footer> -->
+            </footer>
         </div>
     </body>
 </html>
