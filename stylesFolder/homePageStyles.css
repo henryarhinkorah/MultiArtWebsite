@@ -72,7 +72,7 @@
 }
 .logoText{
     color: white;
-    font-size: clamp(0.9vw, 1.2vw, 20px);
+    font-size: clamp(1.2vw, 1.9vw, 20px);
     margin: 0;
     align-self: center;
 }
@@ -99,13 +99,16 @@
 .dealParaContainer{
     margin-top: 1%;
     padding: 10px;
-    width: 100%;
+    width: auto;
+    margin-right: 10%;
+    margin-left: 10%;
     height: auto;
     background-color: red;
     display: flex;
     align-items: center;
     justify-content: center; 
     flex-direction: column;
+    border-radius: 15px;
 }
 .dealParagraph{
     font-size: clamp(0.8rem, 3vw, 1.5rem);
@@ -159,7 +162,7 @@
 }
 .whyParagraph{
     color: white;
-    font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.5rem, 2.2vw, 1.3rem);
     font-weight: 200;
 }
 .paragraphContainer{
@@ -170,17 +173,16 @@
     width: 100%;
     height: 15%;
     padding: 15px;
-    color: black;
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 40px;
+    
 }
 .footerText{
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
     font-size: clamp(0.6rem, 1vw, 1rem);
-    color: red;
+    color: black;
  
  
 }
@@ -222,7 +224,7 @@
 
 /* Mobile menu and icon styles */
 .mobile-menu {
-    
+    display: flex;
     position: fixed;
     top: 0;
     right: 0;

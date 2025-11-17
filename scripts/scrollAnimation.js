@@ -1,35 +1,32 @@
-// Scroll animation - fade in and slide up from bottom
+// Scroll animation - fade in and slide up
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all elements to animate (excluding the first pictureContainer which is the hero)
+    // Select elements (skip first pictureContainer = hero)
     const allPictureContainers = document.querySelectorAll('.pictureContainer');
     const dealParaContainer = document.querySelectorAll('.dealParaContainer');
     const missionContainers = document.querySelectorAll('.missionContainer');
     
-    // Combine all elements to animate (skip first pictureContainer - the hero image)
     const elementsToAnimate = [
         ...dealParaContainer,
         ...missionContainers,
-        ...Array.from(allPictureContainers).slice(1) // Skip first one (hero image)
+        ...Array.from(allPictureContainers).slice(1) // skip the first one
     ];
 
-    // Create Intersection Observer
+    // Fast trigger options
     const observerOptions = {
-        threshold: 0.15, // Trigger when 15% of element is visible
-        rootMargin: '0px 0px -80px 0px' // Start animation slightly before element enters viewport
+        threshold: 0,               // trigger immediately when entering viewport
+        rootMargin: '0px 0px -20px 0px' // slight early start
     };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add animated class when element comes into view
                 entry.target.classList.add('animated');
-                // Stop observing this element after animation
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Add scroll-fade-in class and observe each element
+    // Apply initial class + observe
     elementsToAnimate.forEach(element => {
         if (element) {
             element.classList.add('scroll-fade-in');
@@ -37,4 +34,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
