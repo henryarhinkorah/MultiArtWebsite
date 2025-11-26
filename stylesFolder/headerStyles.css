@@ -4,7 +4,7 @@
     background-color:red;
     width: 90%;
     border-radius: 20px;
-    overflow: hidden;
+    overflow:visible;
     position: fixed;
     top: 20px;
     left: 50%;
@@ -82,21 +82,19 @@
 .mobile-menu {
     display: flex;
     position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50vw; 
-    background-color: rgba(222, 225, 227, 1);
+    top: -60%;
+    background-color: red;
     padding: 20px 15px 0 15px;
     flex-direction: column;
     font-weight: bold;
     gap: 20px;
-    z-index: 1001;
+    z-index: 9999;
     transform: translateX(100%); /* Start off-screen */
-    transition: transform 0.3s ease; /* Smooth slide-in effect */
     align-items: flex-start;
     justify-content: flex-start; 
     backdrop-filter: blur(5px); 
+    opacity: 0.9;
+   
 
 }
 .mobile-menu.show{
@@ -110,6 +108,11 @@
 
 }
 
+/* Highlight for active page link in mobile menu */
+.mobile-menu a.active {
+    text-decoration: underline;
+}
+
 /* Mobile menu icon */
 .mobile-menu-icon {
     display: none;
@@ -121,12 +124,13 @@
     z-index: 1002;
 }
 .mobileContainer{
-    margin-top: 35%;
+    
     flex-direction: column;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start; 
     gap: 20px; 
+    
 }
 
 /* Scroll Animation Styles */
@@ -149,5 +153,26 @@
 
     .mobile-menu-icon {
     display: block; /* Show menu icon */
+    }
+
+    /* On mobile, make the menu cover the whole screen */
+    .mobile-menu {   
+        width: 100vw;
+        height: 100vh;
+        left: -20px;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mobileContainer {
+        margin-top: 0;
+        align-items: center;
+        width:100vw;
+    }
+
+    .mobile-menu a {
+        font-size: 1.2rem;
     }
 }
