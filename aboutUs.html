@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - MultiArt Website</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Global Header Styles -->
+    <link rel="stylesheet" href="./stylesFolder/headerStyles.css">
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="./stylesFolder/aboutUsStyles.css">
+
+    <!-- Scripts -->
+    <script src="./scripts/toggleMenuScript.js" defer></script>
+    <script src="./scripts/headerScrollBlur.js" defer></script>
+    <script src="./scripts/scrollAnimation.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="headerContainer">
+        <div class="nameLogo"> 
+            <img src="./media/LOGO.png" alt="logo" class="logo">
+            <h2 class="logoText">Multi-Art Services</h2>
+        </div>
+
+        <div class="pagesContainer">
+            <nav class="pages">
+                <a href="index.html">Home</a>
+                <a href="aboutUs.html" class="active">About Us</a>
+                <a href="contactUs.html">Contact Us</a>  
+                <a href="gallery.html">Gallery</a>
+                <a href="ourServices.html">Our Services</a>
+            </nav>
+
+            <button id="mobile-menu-icon" class="mobile-menu-icon" onclick="toggleMobileMenu(); return false;">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mobile-menu" class="mobile-menu">
+                <div class="mobileContainer">
+                    <a href="index.html">Home</a>
+                    <a href="aboutUs.html">About Us</a>
+                    <a href="contactUs.html">Contact Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="ourServices.html">Our Services</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="heroSection scroll-fade-in">
+        <img src="./media/img1.jpeg" class="heroImage" alt="Engineering Team">
+        <div class="heroOverlay">
+            <h1 class="heroTitle">About Multi-Art Engineering</h1>
+            <p class="heroSubtitle">Where innovation meets unmatched technical expertise</p>
+        </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="aboutSection scroll-fade-in">
+        <div class="aboutImageContainer">
+            <img src="./media/img2.jpeg" class="aboutImage" alt="Engineers working">
+        </div>
+        <div class="aboutTextContainer">
+            <h2 class="sectionTitle">Who We Are</h2>
+            <p class="sectionParagraph">
+                Multi-Art Engineering Services is a modern engineering and technical solutions provider dedicated 
+                to delivering excellence across electrical, mechanical, automation, fabrication, and industrial systems.  
+                With years of experience and a passion for innovation, we bring reliability, safety, and precision to every project.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="aboutSection reverse scroll-fade-in">
+        <div class="aboutTextContainer">
+            <h2 class="sectionTitle">Our Story</h2>
+            <p class="sectionParagraph">
+                Founded with the vision of providing world-class engineering solutions, our team has grown into a 
+                trusted partner for individuals, businesses, factories, and major institutions.  
+                We combine hands-on experience with advanced technology to solve real-world technical challenges.
+            </p>
+        </div>
+
+        <div class="aboutImageContainer">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" class="aboutImage" alt="Engineering tools">
+        </div>
+    </section>
+
+    <!-- WHAT DRIVES US -->
+    <section class="aboutSection scroll-fade-in">
+        <div class="aboutImageContainer">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" class="aboutImage" alt="Teamwork image">
+        </div>
+        <div class="aboutTextContainer">
+            <h2 class="sectionTitle">What Drives Us</h2>
+            <p class="sectionParagraph">
+                We believe in precision, safety, professionalism, and delivering results that stand the test of time.  
+                Our goal is to support businesses and individuals with dependable engineering solutions backed by 
+                great customer service and strong technical expertise.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footerText">&copy; 2025 MultiArtServices. All rights reserved.</p>
+    </footer>
+</body>
+</html>

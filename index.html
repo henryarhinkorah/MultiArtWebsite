@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMzYoGhV8ZZZPih6/EEH5DVR+0gXc8/0O2kPZs" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./stylesFolder/homePageStyles.css"> 
+        <link rel="stylesheet" href="./stylesFolder/headerStyles.css">
+
         <script src="./scripts/activeUnderline.js" defer></script>
         <script src="./scripts/toggleMenuScript.js" defer></script>
         <script src="./scripts/headerScrollBlur.js" defer></script>
@@ -24,55 +26,53 @@
                 align-items: center;
               
             }
-        
-           
-  
             
         </style>
     </head>
 
     <body>
-        <div class="mainContainer">
-            <div class="pictureContainer">
-                <img src="./media/engineerPic.jpg" alt="engineer's picture" class="picture">
-                <div class="quoteContainer">
-                    <h2 class="quoteText">Where <span class="innovation">Innovation</span> Meets Structural <span class="perfection">Perfection</span></h2>
-                </div>
+        <div class="headerContainer">
+            <div class="nameLogo"> 
+                <img src="./media/LOGO.png" alt="logo" class="logo">
+                <h2 class="logoText">Multi-Art Services</h2>
             </div>
-                <div class="headerContainer">
-                    <div class="nameLogo"> 
-                        <img src="./media/LOGO.png" alt="logo" class="logo">
-                        <h2 class="logoText">Multi-Art Services</h2>
-                    </div>
-                        <div class="pagesContainer">
-                            <nav class="pages">
-                                <a href="homePage.html">Home</a>
+                <div class="pagesContainer">
+                    <nav class="pages">
+                        <a href="index.html" class="active">Home</a>
+                        <a href="aboutUs.html">About Us</a>
+                        <a href="contactUs.html">Contact Us</a>  
+                        <a href="gallery.html">Gallery</a>
+                        <a href="ourServices.html">Our Services</a>
+                    </nav>
+                
+                        <!-- Mobile Menu Icon for smaller screens -->
+                        <button id="mobile-menu-icon" class="mobile-menu-icon" onclick="toggleMobileMenu(); return false;">
+                        <i class="fas fa-bars"></i>
+                        </button>
+                
+                    
+                        <!-- Hidden dropdown menu for small screens -->
+                        <nav id="mobile-menu" class="mobile-menu">
+                            <div class="mobileContainer">
+                                <a href="index.html">Home</a>
                                 <a href="aboutUs.html">About Us</a>
                                 <a href="contactUs.html">Contact Us</a>  
                                 <a href="gallery.html">Gallery</a>
                                 <a href="ourServices.html">Our Services</a>
-                            </nav>
-                        
-                                <!-- Mobile Menu Icon for smaller screens -->
-                                <button id="mobile-menu-icon" class="mobile-menu-icon" onclick="toggleMobileMenu(); return false;">
-                                <i class="fas fa-bars"></i>
-                                </button>
-                        
-                            
-                                <!-- Hidden dropdown menu for small screens -->
-                                <nav id="mobile-menu" class="mobile-menu">
-                                    <div class="mobileContainer" >
-                                        <a href="homePage.html">Home</a>
-                                        <a href="aboutUs.html">About Us</a>
-                                        <a href="contactUs.html">Contact Us</a>  
-                                        <a href="gallery.html">Gallery</a>
-                                        <a href="ourServices.html">ourServices</a>
-                                    </div>
-                                </nav>
-                     
-                        </div>
-        
+                            </div>
+                        </nav>
+             
                 </div>
+
+        </div>
+        <div class="mainContainer">
+            <div class="pictureContainer heroPictureContainer">
+                <img src="./media/engineerPic.jpg" alt="engineer's picture" class="picture heroPicture">
+                <div class="quoteContainer">
+                    <h2 class="quoteText">Where <span class="innovation">Innovation</span> Meets Structural <span class="perfection">Perfection</span></h2>
+                </div>
+            </div>
+               
 
                 
                 <div class="dealParaContainer">
@@ -137,7 +137,7 @@
                     <div class="pictureContainer" style="margin-top: 22px; ">
                         <img src="./media/engpic.png" alt="engineer's picture" class="picture">
                         <div class="whyContainer">
-                            <h1 style='color: white; text-align: center;'>Why Choose Us? </h1>
+                            <h1 style='color: red; text-align: center;'>Why Choose Us? </h1>
                             <div class="paragraphContainer">
                                 <h3 class="whyParagraph">
                                     At Multi Art Engineering , we combine innovation, precision, and expAt [Your Company Name], we combine innovation, precision, and expertise to deliver reliable engineering solutions that stand the test of time. Our team is committed to excellence, safety, and sustainability—ensuring every project is completed with superior quality and attention to detail. We don’t just build; we engineer solutions that make a lasting impact.ertise to deliver reliable engineering solutions that stand the test of time. Our team is committed to excellence, safety, and sustainability—ensuring every project is completed with superior quality and attention to detail. We don’t just build; we engineer solutions that make a lasting impact.  

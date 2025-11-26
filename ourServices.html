@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Services - MultiArt Services</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- reuse your header + homepage styles -->
+  <link rel="stylesheet" href="./stylesFolder/headerStyles.css">
+  <link rel="stylesheet" href="./stylesFolder/homePageStyles.css">
+
+  <style>
+    body,html { margin:0; padding:0; font-family:'Montserrat', sans-serif; background:#fff; overflow-x:hidden; }
+    .pageContainer{ width:90%; margin:110px auto 80px; } /* offset for fixed header */
+    .servicesIntro{ display:flex; gap:24px; align-items:center; margin-bottom:28px; }
+    .servicesIntro .introText { flex:1; }
+    .servicesIntro h1{ color: #e11; font-size: clamp(1.4rem, 3vw, 2.2rem); margin:0 0 8px; }
+    .servicesIntro p{ margin:0; color:#333; line-height:1.5; }
+
+    .servicesGrid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap:22px;
+    }
+
+    .serviceCard{
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255, 245, 245, 1) 100%);
+      border-radius:16px;
+      padding:20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform .3s ease, box-shadow .3s ease;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .serviceCard:hover{ transform: translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.12); }
+
+    .serviceIcon{
+      min-width:64px;
+      height:64px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(225,33,33,0.95);
+      color:white;
+      font-size:1.4rem;
+      flex-shrink:0;
+    }
+
+    .serviceBody h3{ margin:0 0 6px; color:#111; font-size:1.05rem; }
+    .serviceBody p{ margin:0; color:#555; line-height:1.45; font-size:0.95rem; }
+
+    /* smaller screens */
+    @media (max-width:768px){
+      .pageContainer{ margin-top:90px; }
+      .servicesIntro{ flex-direction:column; text-align:center; }
+    }
+
+    .scroll-fade-in{ opacity:0; transform: translateY(30px); transition: opacity .8s, transform .8s; }
+    .scroll-fade-in.animated{ opacity:1; transform: translateY(0); }
+  </style>
+
+  <script src="./scripts/toggleMenuScript.js" defer></script>
+  <script src="./scripts/headerScrollBlur.js" defer></script>
+  <script src="./scripts/scrollAnimation.js" defer></script>
+</head>
+<body>
+  <div class="headerContainer">
+    <div class="nameLogo">
+      <img src="./media/LOGO.png" alt="logo" class="logo">
+      <h2 class="logoText">Multi-Art Services</h2>
+    </div>
+
+    <div class="pagesContainer">
+      <nav class="pages">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="ourServices.html" class="active">Our Services</a>
+      </nav>
+
+      <button id="mobile-menu-icon" class="mobile-menu-icon" onclick="toggleMobileMenu(); return false;">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="mobile-menu" class="mobile-menu">
+        <div class="mobileContainer">
+          <a href="index.html">Home</a>
+          <a href="aboutUs.html">About Us</a>
+          <a href="contactUs.html">Contact Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="ourServices.html">Our Services</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="pageContainer">
+    <section class="servicesIntro scroll-fade-in">
+      <div class="introText">
+        <h1>Our Services</h1>
+        <p>We deliver professional engineering, automation, installation and maintenance services tailored to your needs. Click a service to learn more or contact us to discuss your project.</p>
+      </div>
+      <div style="min-width:220px;">
+        <img src="https://picsum.photos/400/300?random=201" alt="service" style="width:100%; border-radius:12px; object-fit:cover;">
+      </div>
+    </section>
+
+    <section class="servicesGrid">
+      <!-- Repeat these cards as needed -->
+      <div class="serviceCard scroll-fade-in">
+        <div class="serviceIcon"><i class="fas fa-bolt"></i></div>
+        <div class="serviceBody">
+          <h3>Electrical Installation</h3>
+          <p>Complete wiring, distribution boards, power systems and preventive maintenance for homes and industries.</p>
+        </div>
+      </div>
+
+      <div class="serviceCard scroll-fade-in">
+        <div class="serviceIcon"><i class="fas fa-cogs"></i></div>
+        <div class="serviceBody">
+          <h3>Mechanical & Fabrication</h3>
+          <p>Custom fabrication, machine servicing, and mechanical installations built to last in industrial conditions.</p>
+        </div>
+      </div>
+
+      <div class="serviceCard scroll-fade-in">
+        <div class="serviceIcon"><i class="fas fa-robot"></i></div>
+        <div class="serviceBody">
+          <h3>Process Automation</h3>
+          <p>PLC/SCADA design, control systems, and automation to increase productivity and reduce downtime.</p>
+        </div>
+      </div>
+
+      <div class="serviceCard scroll-fade-in">
+        <div class="serviceIcon"><i class="fas fa-solar-panel"></i></div>
+        <div class="serviceBody">
+          <h3>Solar Systems</h3>
+          <p>Design, supply and installation of solar PV systems, inverters, and battery backups for reliable power.</p>
+        </div>
+      </div>
+
+      <div class="serviceCard scroll-fade-in">
+        <div class="serviceIcon"><i class="fas fa-tools"></i></div>
+        <div class="serviceBody">
+          <h3>Maintenance & Troubleshooting</h3>
+          <p>Onsite inspection, fault diagnosis and repair to keep your equipment performing smoothly.</p>
+        </div>
+      </div>
+
+      <div class="serviceCard scroll-fade-in">
+        <div class="serviceIcon"><i class="fas fa-shield-alt"></i></div>
+        <div class="serviceBody">
+          <h3>Security & CCTV</h3>
+          <p>Surveillance and security system installations to protect personnel, property and assets.</p>
+        </div>
+      </div>
+
+      <!-- add more cards if required -->
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p class="footerText">&copy; 2025 MultiArtServices. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // scroll animation fallback (same tiny script as gallery)
+    (function(){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('animated'); });
+      }, {threshold:0.12});
+      document.querySelectorAll('.scroll-fade-in').forEach(n=>obs.observe(n));
+    })();
+  </script>
+</body>
+</html>

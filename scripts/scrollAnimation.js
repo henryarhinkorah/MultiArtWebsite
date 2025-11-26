@@ -1,15 +1,7 @@
 // Scroll animation - fade in and slide up
 document.addEventListener('DOMContentLoaded', function() {
-    // Select elements (skip first pictureContainer = hero)
-    const allPictureContainers = document.querySelectorAll('.pictureContainer');
-    const dealParaContainer = document.querySelectorAll('.dealParaContainer');
-    const missionContainers = document.querySelectorAll('.missionContainer');
-    
-    const elementsToAnimate = [
-        ...dealParaContainer,
-        ...missionContainers,
-        ...Array.from(allPictureContainers).slice(1) // skip the first one
-    ];
+    // Select every element that wants the scroll fade animation
+    const elementsToAnimate = document.querySelectorAll('.scroll-fade-in');
 
     // Fast trigger options
     const observerOptions = {
@@ -26,11 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Apply initial class + observe
-    elementsToAnimate.forEach(element => {
-        if (element) {
-            element.classList.add('scroll-fade-in');
-            observer.observe(element);
-        }
-    });
+    // Observe each target so it animates when entering the viewport
+    elementsToAnimate.forEach(element => observer.observe(element));
 });

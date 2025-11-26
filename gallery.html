@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - MultiArt Services</title>
+
+  <!-- fonts & icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- use your existing shared styles so the header matches exactly -->
+  <link rel="stylesheet" href="./stylesFolder/headerStyles.css">
+  <link rel="stylesheet" href="./stylesFolder/homePageStyles.css">
+
+  <!-- page-specific -->
+  <style>
+    :root{
+      --page-width: 90%;
+      --card-radius: 12px;
+      --gap: 18px;
+    }
+    body,html { font-family: 'Montserrat', sans-serif; margin:0; padding:0; background:#fafafa; overflow-x:hidden; }
+
+    .pageTitle {
+      width: var(--page-width);
+      margin: 120px auto 20px; /* header is fixed so push down */
+      color: #111;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+    }
+
+    .galleryGrid{
+      width: var(--page-width);
+      margin: 10px auto 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--gap);
+    }
+
+    .galleryItem{
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--card-radius);
+      background: #eee;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transform: translateY(0);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .galleryItem img{
+      width:100%;
+      height: 220px;
+      object-fit: cover;
+      display:block;
+      transition: transform .6s ease;
+    }
+
+    .galleryItem:hover{ transform: translateY(-6px); box-shadow: 0 14px 32px rgba(0,0,0,0.12); }
+    .galleryItem:hover img{ transform: scale(1.06); }
+
+    /* dummy caption overlay */
+    .caption {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      background: rgba(0,0,0,0.45);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      backdrop-filter: blur(3px);
+    }
+
+    /* responsive gallery top spacing when header fixed */
+    @media (max-width:768px){
+      .pageTitle { margin-top: 90px; text-align:center; }
+    }
+
+    /* keep using your scroll animation classes */
+    .scroll-fade-in{ opacity:0; transform: translateY(30px); transition: opacity .8s, transform .8s; }
+    .scroll-fade-in.animated{ opacity:1; transform: translateY(0); }
+  </style>
+
+  <script src="./scripts/toggleMenuScript.js" defer></script>
+  <script src="./scripts/headerScrollBlur.js" defer></script>
+  <script src="./scripts/scrollAnimation.js" defer></script>
+</head>
+<body>
+  <!-- header uses same classes as homepage -->
+  <div class="headerContainer">
+    <div class="nameLogo">
+      <img src="./media/LOGO.png" alt="logo" class="logo">
+      <h2 class="logoText">Multi-Art Services</h2>
+    </div>
+
+    <div class="pagesContainer">
+      <nav class="pages">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="ourServices.html">Our Services</a>
+      </nav>
+
+      <button id="mobile-menu-icon" class="mobile-menu-icon" onclick="toggleMobileMenu(); return false;">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="mobile-menu" class="mobile-menu">
+        <div class="mobileContainer">
+          <a href="index.html">Home</a>
+          <a href="aboutUs.html">About Us</a>
+          <a href="contactUs.html">Contact Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="ourServices.html">Our Services</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <h1 class="pageTitle scroll-fade-in">Project Gallery — Examples & Works</h1>
+
+  <main class="galleryGrid">
+    <!-- lots of dummy pics (replace with your own paths later) -->
+    <!-- Using picsum with different seeds so each is unique -->
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=101" alt=""><div class="caption">Project 101</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=102" alt=""><div class="caption">Project 102</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=103" alt=""><div class="caption">Project 103</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=104" alt=""><div class="caption">Project 104</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=105" alt=""><div class="caption">Project 105</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=106" alt=""><div class="caption">Project 106</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=107" alt=""><div class="caption">Project 107</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=108" alt=""><div class="caption">Project 108</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=109" alt=""><div class="caption">Project 109</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=110" alt=""><div class="caption">Project 110</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=111" alt=""><div class="caption">Project 111</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=112" alt=""><div class="caption">Project 112</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=113" alt=""><div class="caption">Project 113</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=114" alt=""><div class="caption">Project 114</div></div>
+    <div class="galleryItem scroll-fade-in"><img src="https://picsum.photos/600/400?random=115" alt=""><div class="caption">Project 115</div></div>
+    <!-- add/remove as many as you like -->
+  </main>
+
+  <footer class="footer">
+    <p class="footerText">&copy; 2025 MultiArtServices. All rights reserved.</p>
+  </footer>
+
+  <!-- initialize scroll animations if using your scrollAnimation.js (keeps same pattern as homepage) -->
+  <script>
+    // fallback simple animator if your scrollAnimation.js isn't present
+    (function(){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('animated'); });
+      }, {threshold:0.15});
+      document.querySelectorAll('.scroll-fade-in').forEach(n=>obs.observe(n));
+    })();
+  </script>
+</body>
+</html>

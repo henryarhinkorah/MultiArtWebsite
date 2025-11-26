@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - MultiArtWebsite</title>
+
+    <!-- Icons + Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="./stylesFolder/headerStyles.css">
+    <link rel="stylesheet" href="./stylesFolder/homePageStyles.css">
+    <link rel="stylesheet" href="./stylesFolder/contactUsStyles.css">
+
+    <!-- Scripts -->
+    <script src="./scripts/activeUnderline.js" defer></script>
+    <script src="./scripts/toggleMenuScript.js" defer></script>
+    <script src="./scripts/headerScrollBlur.js" defer></script>
+    <script src="./scripts/scrollAnimation.js" defer></script>
+
+  
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="headerContainer">
+        <div class="nameLogo">
+            <img src="./media/LOGO.png" class="logo" alt="logo">
+            <h2 class="logoText">Multi-Art Services</h2>
+        </div>
+
+        <nav class="pages">
+            <a href="index.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contactUs.html" class="active">Contact Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="ourServices.html">Our Services</a>
+        </nav>
+
+        <button id="mobile-menu-icon" class="mobile-menu-icon">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mobile-menu" class="mobile-menu">
+            <div class="mobileContainer">
+                <a href="index.html">Home</a>
+                <a href="aboutUs.html">About Us</a>
+                <a href="contactUs.html">Contact Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="ourServices.html">Our Services</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="contactHero scroll-fade-in">
+        <img src="./media/img3.jpeg" alt="Contact Image (Dummy)">
+        <div class="contactHeroText">
+            <h1>Let's Connect</h1>
+            <p>Have a project in mind? Need expert engineering services?</p>
+        </div>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contactContainer scroll-fade-in">
+        <h2 style="text-align:center; margin-bottom:20px;">Get In Touch</h2>
+
+        <div class="contactInfo">
+            <div class="contactCard">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+233 55 000 1234</p>
+            </div>
+
+            <div class="contactCard">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>multiartengineering@gmail.com</p>
+            </div>
+
+            <div class="contactCard">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Accra, Ghana</p>
+            </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contactForm scroll-fade-in">
+            <h3>Send Us a Message</h3>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Write your message..." required></textarea>
+                <button type="submit">Submit Message</button>
+            </form>
+        </div>
+
+        <!-- MAP -->
+        <div class="mapContainer scroll-fade-in">
+            <img src="https://via.placeholder.com/800x400" 
+                 alt="Map Dummy" 
+                 style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p class="footerText">&copy; 2025 MultiArtServices. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

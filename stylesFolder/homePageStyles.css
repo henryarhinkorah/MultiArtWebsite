@@ -39,49 +39,7 @@
     align-items: center;
     position: relative;
 }
-.headerContainer {
-    height: auto;
-    padding: 10px;
-    background-color:red;
-    width: 90%;
-    border-radius: 20px;
-    overflow: hidden;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(255, 0, 0, 0.3);
-    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
-}
 
-.headerContainer.scrolled {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(255, 0, 0, 0.5);
-}
-.logo{
-    width:5%;
-    height:auto;    
-    object-fit: contain;
-    flex-shrink: 0;
-}
-.logoText{
-    color: white;
-    font-size: clamp(1.2vw, 1.9vw, 20px);
-    margin: 0;
-    align-self: center;
-}
-.nameLogo{
-    flex-direction: row;
-    display: flex;
-    gap: 5px;
-    margin-left: 10px;
-}
 .weDealContainer{
     margin-top: 5%;
     width: 100%;
@@ -113,7 +71,7 @@
 .dealParagraph{
     font-size: clamp(0.8rem, 3vw, 1.5rem);
     font-weight: 400;
-    color: wheat;
+    color: white;
     text-align: center;
     line-height: 1.4;
 }
@@ -186,112 +144,14 @@
  
  
 }
-.pages {
-    display: flex;
-    gap: clamp(5px, 2vw, 20px);
-    flex: 1;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+
+/* Hero image on the home page – behaves like About page hero image */
+.heroPictureContainer {
+    height: 70vh;
 }
 
-.pages a{
-    position: relative; 
-    color: white;
-    text-decoration: none;
-    font-size: clamp(0.6rem, 1vw, 1rem);
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.pages a::after{
-            content: ' ';
-            height: 2px;
-            width: 0;
-            position: absolute;
-            background: white;
-            left: 0;
-            bottom: -5px;
-            transition: 0.5s;
-            border-radius: 9px;
-}
-.pages a:hover::after {
-    width:100%;
-}
-.pages a.active::after {
-    width: 100%; /* Full-width underline for active link */
-}
-
-
-/* Mobile menu and icon styles */
-.mobile-menu {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50vw; 
-    background-color: rgba(222, 225, 227, 1);
-    padding: 20px 15px 0 15px;
-    flex-direction: column;
-    font-weight: bold;
-    gap: 20px;
-    z-index: 1001;
-    transform: translateX(100%); /* Start off-screen */
-    transition: transform 0.3s ease; /* Smooth slide-in effect */
-    align-items: flex-start;
-    justify-content: flex-start; 
-    backdrop-filter: blur(5px); 
-
-}
-.mobile-menu.show{
-    transform: translateX(0);
-}
-
-.mobile-menu a {
-    color:white;
-    text-decoration: none;
-    font-size: 1rem;     
-
-}
-
-/* Mobile menu icon */
-.mobile-menu-icon {
-    display: none;
-    font-size: clamp(1rem, 2vw, 2rem);
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1002;
-}
-.mobileContainer{
-    margin-top: 35%;
-    flex-direction: column;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start; 
-    gap: 20px; 
-}
-
-/* Scroll Animation Styles */
-.scroll-fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.scroll-fade-in.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Show mobile menu for smaller screens */
-@media (max-width: 768px) {
-    .pages {
-    display: none; /* Hide categories on small screens */
-    }
-
-    .mobile-menu-icon {
-    display: block; /* Show menu icon */
-    }
+.heroPicture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
