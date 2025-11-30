@@ -60,7 +60,7 @@ font-weight: bold;
     flex-shrink: 0;
 }
 .pagesContainer{
-    margin-right: 30px;
+    margin-right: 3%;
 }
 
 .pages a::after{
