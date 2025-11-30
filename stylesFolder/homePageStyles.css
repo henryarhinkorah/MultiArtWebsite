@@ -38,7 +38,6 @@
     width: 100%;
     height: 100%;
     padding: 0;
-    align-items: center;
     position: relative;
 }
 
@@ -70,14 +69,18 @@ ul {
 
 .dealParaContainer{
     padding: 7%;
-    width: fit-content;
+    width: 90%;
     margin: 0 auto; 
     margin-top: 7%;
     text-align: center;
     height: auto;
-    background: linear-gradient(135deg, rgb(20, 105, 232), rgb(120, 20, 180));
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), /* 25% black overlay */
+    url('../media/img6.jpg');    
+    background-size: cover;        /* Makes image fill the div */
+    background-position: center;   /* Keeps image centered */
+    background-repeat: no-repeat;  /* Prevents tiling */
     display: flex;
-    border-radius: 15px;
     align-items: center;
     justify-content: center; 
     flex-direction: column;

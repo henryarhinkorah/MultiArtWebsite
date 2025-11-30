@@ -15,9 +15,9 @@
 
   <style>
     body,html { margin:0; padding:0; font-family:'Montserrat', sans-serif; background:#fff; overflow-x:hidden; }
-    .pageContainer{ width:90%; margin:110px auto 80px; } /* offset for fixed header */
+    .pageContainer{ width:90%; margin:110px auto 80px;  flex-direction: column;  } /* offset for fixed header */
     .servicesIntro{ display:flex; gap:24px; align-items:center; margin-bottom:28px; }
-    .servicesIntro .introText { flex:1; }
+    .servicesIntro .introText { flex:1;}
     .servicesIntro h1{ color: #e11; font-size: clamp(1.4rem, 3vw, 2.2rem); margin:0 0 8px; }
     .servicesIntro p{ margin:0; color:#333; line-height:1.5; }
 
@@ -105,10 +105,10 @@
     <section class="servicesIntro scroll-fade-in">
       <div class="introText">
         <h1>Our Services</h1>
-        <p>We deliver professional engineering, automation, installation and maintenance services tailored to your needs. Click a service to learn more or contact us to discuss your project.</p>
+        <p>We deliver professional engineering, automation, installation and maintenance services tailored to your needs.</p>
       </div>
-      <div style="min-width:220px;">
-        <img src="https://picsum.photos/400/300?random=201" alt="service" style="width:100%; border-radius:12px; object-fit:cover;">
+      <div style="min-width:220px;  max-width: 380px; ">
+        <img src="./media/page20_img1.jpeg" alt="service" style="width:100%; border-radius:12px; object-fit:cover;">
       </div>
     </section>
 
