@@ -57,14 +57,16 @@
 .dealParaContainer{
     margin-top: 1%;
     padding: 10px;
-    width: auto;
-    
+    width: 70%;  
+    margin-left: 15%;
     height: auto;
-    background-color: red;
+    background: linear-gradient(135deg, rgb(20, 105, 232), rgb(120, 20, 180));
     display: flex;
+    border-radius: 15px;
     align-items: center;
     justify-content: center; 
     flex-direction: column;
+   
 }
 .dealParagraph{
     font-size: clamp(0.8rem, 3vw, 1.5rem);

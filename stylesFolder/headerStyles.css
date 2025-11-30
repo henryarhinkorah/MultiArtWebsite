@@ -31,7 +31,7 @@
 }
 .logoText{
     color: white;
-    font-size: clamp(1.2vw, 1.9vw, 20px);
+    font-size: clamp(1.6vw, 2.1vw, 20px);
     margin: 0;
     align-self: center;
 }
