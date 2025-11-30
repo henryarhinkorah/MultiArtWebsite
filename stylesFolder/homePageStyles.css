@@ -21,7 +21,7 @@
 }
 .quoteText {
     color: white;
-    font-size: clamp(0.8rem, 2.5vw, 3rem);
+    font-size: clamp(1rem, 4vw, 3rem);
     font-weight: 700;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -162,7 +162,7 @@ ul {
 
 /* Hero image on the home page – behaves like About page hero image */
 .heroPictureContainer {
-    height: 100vh;
+    height: 80vh;
 }
 
 .heroPicture {
