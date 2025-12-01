@@ -92,11 +92,13 @@ body, html {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .aboutSection {
-        flex-direction: column;
+    .aboutSection,
+    .aboutSection.reverse {
+        flex-direction: column ;
         text-align: center;
     }
 }
+
 
 .footer{
     width: 100%;

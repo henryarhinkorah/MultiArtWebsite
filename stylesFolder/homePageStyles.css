@@ -134,12 +134,18 @@ ul {
     z-index: 100;
     width:auto;
     height:fit-content;
+    max-width: 500px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
    
 }
 .whyParagraph{
     color: white;
     font-size: clamp(0.5rem, 2.2vw, 1.3rem);
     font-weight: 200;
+    text-align: center;
+
 }
 .paragraphContainer{
     width: 100%;
