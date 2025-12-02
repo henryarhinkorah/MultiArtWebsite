@@ -1,7 +1,7 @@
 .headerContainer {
     height: auto;
     padding: 15px;
-    background-color: rgba(8, 0, 0, 0.2);
+    background-color: rgba(8, 0, 0, 0.9);
     width: 90%;
     border-radius: 20px;
     overflow: visible;
@@ -18,11 +18,7 @@
     transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
 }
 
-.headerContainer.scrolled {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(8, 0, 0, 0.2);
-}
+
 
 .logo {
     width: 5%;
@@ -32,7 +28,7 @@
 }
 
 .logoText {
-    color: red;
+    color: rgb(70, 186, 253);
     font-size: clamp(2.4vw, 3vw, 20px);
     margin: 0;
     align-self: center;
@@ -57,7 +53,7 @@
 
 .pages a {
     position: relative;
-    color: red;
+    color: rgb(70, 186, 253);    
     text-decoration: none;
     font-size: clamp(0.6rem, 1vw, 1rem);
     white-space: nowrap;
